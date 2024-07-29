@@ -178,5 +178,9 @@ src/application/cardioflow.xcodeproj/xcuserdata/*
 
 # federated learning
 *.npz
+!src/federated/weights/round-250-weights.npz
 src/federated/output.txt
+
+# Analysis Script
+analysis/media/*.png
 
