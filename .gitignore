@@ -175,3 +175,8 @@ src/model/model_temp.mlpackage/*
 
 # iOS application
 src/application/cardioflow.xcodeproj/xcuserdata/*
+
+# federated learning
+*.npz
+src/federated/output.txt
+
