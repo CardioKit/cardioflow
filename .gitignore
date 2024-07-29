@@ -173,3 +173,5 @@ cython_debug/
 # temporary CoreML files
 src/model/model_temp.mlpackage/*
 
+# iOS application
+src/application/cardioflow.xcodeproj/xcuserdata/*
