@@ -170,3 +170,6 @@ cython_debug/
 *.hea
 *.csv
 
+# temporary CoreML files
+src/model/model_temp.mlpackage/*
+
