@@ -277,7 +277,7 @@ class ProcessEcg {
                 let csvString = rowsCSV.joined(separator: "\n")
                 try csvString.write(to: fileURL, atomically: true, encoding: .utf8)
                 await MainActor.run {
-                    self.isLoadCSV = true
+                    self.isLoadCSV = false
                 }
                 
                 return completion(fileURL)

@@ -11,7 +11,7 @@ import PeakSwift
 struct EcgView: View {
     
     static var fetchDescriptor: FetchDescriptor<EcgRecording> {
-        var descriptor = FetchDescriptor<EcgRecording>()
+        var descriptor = FetchDescriptor<EcgRecording>(sortBy: [.init(\.name)])
         descriptor.propertiesToFetch = [\.name, \.timestamp]
         return descriptor
     }
@@ -55,9 +55,15 @@ struct EcgView: View {
                                         .foregroundColor(.secondary)
                                 }
                                 Spacer()
-                                Text(ecgRecording.name)
-                                    .bold()
-                                    .font(.headline)
+                                VStack {
+                                    Text(ecgRecording.name)
+                                        .bold()
+                                        .font(.headline)
+                                    Text(ecgRecording.uuid.uuidString)
+                                        .italic()
+                                        .font(.system(size: 6))
+                                        .foregroundColor(.secondary)
+                                }
                             }
                             .padding()
                             .swipeActions {

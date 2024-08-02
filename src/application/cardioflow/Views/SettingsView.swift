@@ -184,12 +184,16 @@ struct SettingsView: View {
                     HStack {
                         Text("Export to CSV")
                         Spacer()
-                        Button(action: {
-                            processECG.prepareCSVasURL { fileURL in
-                                self.shareLink = fileURL
+                        if processECG.isLoadCSV {
+                            ProgressView(value: processECG.progressLoadCSV).progressViewStyle(CircularProgressViewStyle(circleText: String(Int(processECG.progressLoadCSV*100)) + "%")).frame(width: 75, height: 75)
+                        } else {
+                            Button(action: {
+                                processECG.prepareCSVasURL { fileURL in
+                                    self.shareLink = fileURL
+                                }
+                            }) {
+                                Text("Start")
                             }
-                        }) {
-                            Text("Start")
                         }
                     }
                     
