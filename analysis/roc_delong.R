@@ -24,4 +24,4 @@ roc_cenRes <- roc(label_cen, cenRes)
 
 # Choose from above variables which curve(s) to investigate
 deLongResult <- roc.test(roc_fedResEmb, roc_ftRes, method = "delong")
-ci_roc <- ci.auc(roc_ftResEmb, method = "bootstrap", boot.n = 2000, conf.level = 0.95)
+ci_roc <- ci.auc(roc_ftResEmb, method = "delong", boot.n = 2000, conf.level = 0.95)
