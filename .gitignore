@@ -183,4 +183,5 @@ src/federated/output.txt
 
 # Analysis Script
 analysis/media/*.png
+analysis/media/*.eps
 
