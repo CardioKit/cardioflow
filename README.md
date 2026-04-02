@@ -43,4 +43,15 @@ The application is for scientific purposes solely and is not allowed for medical
 
 If you are using parts of this work or build your experiments up on this repository please cite the following article:
 
-TBD
+```
+@article{kapsecker2025cross,
+  title={Cross-device federated unsupervised learning for the detection of anomalies in single-lead electrocardiogram signals},
+  author={Kapsecker, Maximilian and Jonas, Stephan M},
+  journal={PLOS Digital Health},
+  volume={4},
+  number={4},
+  pages={e0000793},
+  year={2025},
+  publisher={Public Library of Science San Francisco, CA USA}
+}
+```
